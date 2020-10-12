@@ -1,7 +1,7 @@
 import { NestExpressApplication } from '@nestjs/platform-express'
 import { CommandLineUiController } from './command-line-ui.controller'
 import { FrequencyRepository } from './frequency.repository'
-import { resetTestingState, setup } from './main.test'
+import { resetTestingState, setup } from './test-setup'
 import { TimerService } from './timer.service'
 
 describe(TimerService.name, () => {
@@ -73,5 +73,5 @@ describe(TimerService.name, () => {
 
         expect(timerService.numberIsInFibonacciSequence(fibonacci1000)).toBeTruthy()
         expect(timerService.numberIsInFibonacciSequence(fibonacci1001)).toBeFalsy()
-    }, 60000)
+    })
 })

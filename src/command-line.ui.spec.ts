@@ -3,7 +3,7 @@ import { CommandLineServiceFake } from './command-line.service.fake'
 import { CommandLineUiController } from './command-line-ui.controller'
 import { FrequencyRepository } from './frequency.repository'
 import { InputKeyword } from './input-keyword'
-import { resetTestingState, setup } from './main.test'
+import { resetTestingState, setup } from './test-setup'
 import { Prompt } from './prompt'
 import { TimerService } from './timer.service'
 
