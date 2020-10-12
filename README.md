@@ -1,5 +1,10 @@
 ## Run the project
 
+#### Pre-requisites
+- NPM is installed
+- Node.js is installed
+
+#### Set up
 - Clone the repository (the npm `postinstall` script should set up and run the project)
 
 If postinstall doesn't work for some reason:
@@ -31,6 +36,7 @@ In order to make this project production ready I would do the following:
 - Instead of using an in-memory data store I'd use a SQL database. My `FrequencyRepository` class would become a `TypeORM` repository and my `FrequencyStore` would become a `TypeORM` entity.
 - I would do user research to determine which fibonacci values were most likely to be input. Based on my findings I would consider either memoizing the fibonacci determination function or potentially using a caching layer like memcached or redis to avoid redundant computations.
 - I would use environment variables to govern information like the maximum fibonacci range and the port to bind to in the case of a web app.
+- I would create a Dockerfile to containerize the application when used as a web app.
 - I would use a continuous integration service like CircleCI or GitHub Actions to run verify my tests pass and linting rules are honored on each commit. 
 - For the CLI app I would use the oclif framework and upload the repository to NPM with installation and usage instructions
 - For the web app I would use a service like Heroku, AWS, or Azure to provision a server and set up DNS/SSL
